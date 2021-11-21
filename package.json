@@ -1,0 +1,31 @@
+{
+  "name": "sample-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "fastify": "^2.14.1",
+    "fastify-cors": "^3.0.3",
+    "fastify-server-timeout": "^0.1.1",
+    "moment-range": "^4.0.2",
+    "moment-timezone": "^0.5.31",
+    "mongoose": "^6.0.13",
+    "prop-types": "^15.7.2",
+    "typescript": "^3.9.5",
+    "uuidv4": "^6.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

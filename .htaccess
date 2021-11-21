@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+	RewriteCond %{HTTPS} !=on 
+	RewriteRule .* http://localhost:4000%{REQUEST_URI} [R,L]
+ </IfModule>

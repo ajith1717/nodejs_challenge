@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "14d24bd2-ccad-449c-aa5f-8d0d5b70c3b9",
+		"name": "Nodes_Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/api/add-work-time",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqaXQxOUBuYXZndXJ1a3VsLm9yZyIsImlhdCI6MTYwOTM5NjkwMX0.6V2Z14nZnVCkRcnS_V5f24ePmNZSf4o257c6YhP5kGo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"days_active\":[3],\r\n    \"from\":\"12:23\",\r\n    \"to\":\"14:22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/add-work-time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"add-work-time"
+					],
+					"query": [
+						{
+							"key": "auth",
+							"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqaXQxOUBuYXZndXJ1a3VsLm9yZyIsImlhdCI6MTYwOTM5NjkwMX0.6V2Z14nZnVCkRcnS_V5f24ePmNZSf4o257c6YhP5kGo\"",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFqaXQxOUBuYXZndXJ1a3VsLm9yZyIsImlhdCI6MTYwOTM5NjkwMX0.6V2Z14nZnVCkRcnS_V5f24ePmNZSf4o257c6YhP5kGo\"",
+							"disabled": true
+						}
+					]
+				},
+				"description": "To  schedule timing "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/fetch-work-time",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/fetch-work-time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"fetch-work-time"
+					]
+				},
+				"description": "To get all scheduled time"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/edit-work-time",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"a6f6b47f-eb36-4c29-9bb6-8e2b01c7f40d\",\r\n    \"user_id\":\"1\",\r\n    \"days_active\":[1,2,3],\r\n    \"from\":\"120\",\r\n    \"to\":\"22222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/edit-work-time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"edit-work-time"
+					]
+				},
+				"description": "For editing schedulled working time "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/add-apps",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Pay tm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/add-apps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"add-apps"
+					]
+				},
+				"description": "To add apps "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/fetch-apps",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/fetch-apps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"fetch-apps"
+					]
+				},
+				"description": "To get all apps"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/fetch-apps-res",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"is_worktime\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/fetch-apps-res",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"fetch-apps-res"
+					]
+				},
+				"description": "To fetch \r\n   - blocked apps \r\n   - limited apps \r\n   - other apps"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/set-apps-time-limit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"app_id\":\"f03a4800-f18e-48dc-8165-85d9fbbce948\",\r\n    \"is_worktime\":false,\r\n    \"weekend\": \"10:22\",\r\n    \"weekdays\": \"11:22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/set-apps-time-limit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"set-apps-time-limit"
+					]
+				},
+				"description": "To set time limit for app"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/update-apps-time-limit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"33b22743-feaa-4001-b735-f4911deaf393\",\r\n    \"user_id\":\"1\",\r\n    \"app_id\":\"f03a4800-f18e-48dc-8165-85d9fbbce948\",\r\n    \"is_worktime\":false,\r\n    \"weekend\": \"15:00\",\r\n    \"weekdays\": \"18:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/update-apps-time-limit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"update-apps-time-limit"
+					]
+				},
+				"description": "To edit time limit "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/update-block-apps",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"id\": \"8df8e15d-8bef-4224-bb9d-d13947c73382\",\r\n    \"app_id\":\"baab8029-390a-42f2-aca2-acbb42f085eb\",\r\n    \"is_worktime\":true,\r\n    \"is_active\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/update-block-apps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"update-block-apps"
+					]
+				},
+				"description": "To blocking and unblocking apps"
+			},
+			"response": []
+		}
+	]
+}
